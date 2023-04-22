@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Rental Agreement Form</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+</head>
+
+<body>
+  <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
+    <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="index.html" target="_blank">Rental Agreement</a>
+    <ul class="navbar-nav px-3">
+      <li class="nav-item text-nowrap d-none d-sm-none d-sm-block">
+        <small><a class="nav-link" href="#"><span id="account"></span></a></small>
+      </li>
+    </ul>
+  </nav>
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <h2 class="text-center mb-4">Rental Agreement Form</h2>
+        <form id="rentalAgreementForm" class="needs-validation" action="index1.html">
+          <div class="form-group">
+            <label for="landlord">Landlord Address</label>
+            <input type="text" class="form-control" id="landlord" name="landlord" required />
+            <div class="invalid-feedback">
+              Please provide a valid Ethereum address.
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="tenant">Tenant Address</label>
+            <input type="text" class="form-control" id="tenant" name="tenant" required />
+            <div class="invalid-feedback">
+              Please provide a valid Ethereum address.
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="rentAmount">Rent Amount (in eth)</label>
+            <input type="number" class="form-control" id="rentAmount" name="rentAmount" required />
+            <div class="invalid-feedback">
+              Please provide a valid rent amount (in wei).
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="securityDeposit">Security Deposit (in eth)</label>
+            <input type="number" class="form-control" id="securityDeposit" name="securityDeposit" required />
+            <div class="invalid-feedback">
+              Please provide a valid security deposit (in wei).
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="rentalPeriod">Rental Period (in months)</label>
+            <input type="number" class="form-control" id="rentalPeriod" name="rentalPeriod" required />
+            <div class="invalid-feedback">
+              Please provide a valid rental period (in months).
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block" id="submitButton">
+            Submit
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="vendor/web3/dist/web3.js"></script>
+  <script src="vendor/truffle-contract/dist/truffle-contract.js"></script>
+  <script src="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js" type="application/javascript"></script>
+  <script src="app1.js"></script>
+</body>
+
+</html>
